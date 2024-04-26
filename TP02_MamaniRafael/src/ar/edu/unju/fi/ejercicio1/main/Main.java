@@ -8,7 +8,6 @@ import ar.edu.unju.fi.ejercicio1.model.Producto.OrigenFabricacion;
 import ar.edu.unju.fi.ejercicio1.model.Producto.Categoria;
 
 public class Main {
-
     public static void main(String[] args) {
         int opcion = 0;
         do {
