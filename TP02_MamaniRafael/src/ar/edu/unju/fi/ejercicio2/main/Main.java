@@ -25,7 +25,7 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                        crearEfemerides();  papu
+                        crearEfemerides();
                         break;
                     case 2:
                         mostrarEfemerides();
