@@ -57,7 +57,11 @@ public class Main {
         for (Mes meses : Mes.values()) {
             System.out.println((meses.ordinal() + 1) + " - " + meses);
         }
-        System.out.print("Elija el nuevo mes: ");
+        System.out.println("---- Mes ------");
+        for (Mes meses : Mes.values()) {
+            System.out.println((meses.ordinal() + 1) + " - " + meses);
+        }
+        System.out.print("Elija el mes: ");
         int opcionM = scanner.nextInt();
         Mes mes = Mes.values()[opcionM - 1];
         
@@ -115,7 +119,7 @@ public class Main {
 	        System.out.print("Ingrese la nuevo codigo: ");
 	        efemerideEncontrado.setCodigo(scanner.nextLine()); 
 	        
-	        System.out.println("---- Origen de fabricación ------");
+	        System.out.println("---- Mes ------");
 	        for (Mes meses : Mes.values()) {
 	            System.out.println((meses.ordinal() + 1) + " - " + meses);
 	        }
