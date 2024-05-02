@@ -3,6 +3,7 @@ package ar.edu.unju.fi.ejercicio4.main;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.Iterator;
@@ -148,7 +149,7 @@ public class Main {
                 default:
                     System.out.println("Opción no válida. Intente de nuevo.");
             }
-        } while (opcion != 8);
+        } while (opcion != 5);
 	}
 
 }

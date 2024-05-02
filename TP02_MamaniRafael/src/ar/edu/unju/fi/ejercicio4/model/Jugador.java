@@ -92,7 +92,7 @@ public class Jugador {
 
 	@Override
 	public String toString() {
-		return "Jugador [nombre=" + nombre + ", apellido=" + apellido + ", fechaNacimiento=" + fechaNacimiento
+		return "Jugador [nombre=" + nombre + ", apellido=" + apellido + ", fechaNacimiento=" + fechaNacimiento.get(Calendar.DAY_OF_MONTH) + "/" + (fechaNacimiento.get(Calendar.MONTH)+1) + "/" + fechaNacimiento.get(Calendar.YEAR) 
 				+ ", nacionalidad=" + nacionalidad + ", estatura=" + estatura + ", peso=" + peso + ", posicion="
 				+ posicion + "]";
 	}
