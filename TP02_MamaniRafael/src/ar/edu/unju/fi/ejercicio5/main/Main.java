@@ -1,15 +1,16 @@
 package ar.edu.unju.fi.ejercicio5.main;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 import ar.edu.unju.fi.ejercicio5.model.Producto;
 import ar.edu.unju.fi.ejercicio5.model.Categoria;
-import ar.edu.unju.fi.ejercicio5.model.OrigenDeFabricacion;
 import ar.edu.unju.fi.ejercicio5.model.PagoEfectivo;
 import ar.edu.unju.fi.ejercicio5.model.PagoTarjeta;
+import ar.edu.unju.fi.ejercicio5.model.OrigenDeFabricacion;
+
 
 
 public class Main {
@@ -48,26 +49,6 @@ public class Main {
         } while (opcion != 3);
 
         scanner.close();
-    }
-
-    private static ArrayList<Producto> precargarProductos() {
-        ArrayList<Producto> productos = new ArrayList<>();
-        productos.add(new Producto(1, "Teléfono móvil", 500.0, OrigenDeFabricacion.CHINA, Categoria.TELEFONIA, true));
-        productos.add(new Producto(2, "Laptop", 1200.0, OrigenDeFabricacion.BRASIL, Categoria.INFORMATICA, true));
-        productos.add(new Producto(3, "Licuadora", 150.0, OrigenDeFabricacion.URUGUAY, Categoria.ELECTROHOGAR, true));
-        productos.add(new Producto(4, "Cocina", 1500.0, OrigenDeFabricacion.CHINA, Categoria.ELECTROHOGAR, true));
-        productos.add(new Producto(5, "Batidora", 1000.0, OrigenDeFabricacion.BRASIL, Categoria.ELECTROHOGAR, true));
-        productos.add(new Producto(6, "Lavarropas", 4500.0, OrigenDeFabricacion.URUGUAY, Categoria.ELECTROHOGAR, true));
-        productos.add(new Producto(7, "Monitor", 1500.0, OrigenDeFabricacion.CHINA, Categoria.INFORMATICA, true));
-        productos.add(new Producto(8, "CPU", 3200.0, OrigenDeFabricacion.BRASIL, Categoria.INFORMATICA, true));
-        productos.add(new Producto(9, "Taclado", 500.0, OrigenDeFabricacion.URUGUAY, Categoria.INFORMATICA, true));
-        productos.add(new Producto(10, "Taladro", 700.0, OrigenDeFabricacion.CHINA, Categoria.HERRAMIENTAS, true));
-        productos.add(new Producto(11, "Motosierra", 1200.0, OrigenDeFabricacion.BRASIL, Categoria.HERRAMIENTAS, true));
-        productos.add(new Producto(12, "Telefono fijo", 250.0, OrigenDeFabricacion.URUGUAY, Categoria.TELEFONIA, true));
-        productos.add(new Producto(13, "Router", 500.0, OrigenDeFabricacion.CHINA, Categoria.INFORMATICA, true));
-        productos.add(new Producto(14, "Tablet", 1200.0, OrigenDeFabricacion.BRASIL, Categoria.TELEFONIA, true));
-        productos.add(new Producto(15, "Heladera", 5000.0, OrigenDeFabricacion.URUGUAY, Categoria.ELECTROHOGAR, true));
-        return productos;
     }
 
     private static void mostrarProductos(ArrayList<Producto> productos) {
@@ -114,21 +95,21 @@ public class Main {
             case 1:
                 PagoEfectivo pagoEfectivo = new PagoEfectivo(totalCompra, LocalDate.now());
                 pagoEfectivo.realizarPago(totalCompra);
-                System.out.println("----------------------------");
+                System.out.println("------------------------------");
                 pagoEfectivo.imprimirRecibo();
-                System.out.println("----------------------------");
+                System.out.println("------------------------------");
                 break;
             case 2:
                 System.out.println("Ingrese su tarjeta de crédito: ");
                 String tarjeta = scanner.next();
                 PagoTarjeta pagoTarjeta = new PagoTarjeta(tarjeta, LocalDate.now(), totalCompra);
                 pagoTarjeta.realizarPago(totalCompra);
-                System.out.println("----------------------------");
+                System.out.println("------------------------------");
                 pagoTarjeta.imprimirRecibo();
-                System.out.println("----------------------------");
+                System.out.println("------------------------------");
                 break;
             default:
-                System.out.println("Opción de pago no válida.");
+                System.out.println("Opción de pago no válida. ");
                 break;
         }
     }
@@ -140,5 +121,24 @@ public class Main {
             }
         }
         return null;
+    }
+    private static ArrayList<Producto> precargarProductos() {
+        ArrayList<Producto> productos = new ArrayList<>();
+        productos.add(new Producto(7, "Monitor", 153200.0, OrigenDeFabricacion.CHINA, Categoria.INFORMATICA, true));
+        productos.add(new Producto(8, "CPU", 323200.0, OrigenDeFabricacion.CHINA, Categoria.INFORMATICA, true));
+        productos.add(new Producto(1, "Teléfono", 1500.0, OrigenDeFabricacion.CHINA, Categoria.TELEFONIA, true));
+        productos.add(new Producto(2, "Laptop", 1300.0, OrigenDeFabricacion.CHINA, Categoria.INFORMATICA, true));
+        productos.add(new Producto(3, "Licuadora", 2250.0, OrigenDeFabricacion.CHINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto(15, "Heladera", 502100.0, OrigenDeFabricacion.CHINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto(5, "Batidora", 121000.0, OrigenDeFabricacion.CHINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto(6, "Lavarropas", 423500.0, OrigenDeFabricacion.CHINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto(9, "Taclado", 53200.0, OrigenDeFabricacion.CHINA, Categoria.INFORMATICA, true));
+        productos.add(new Producto(10, "Taladro", 7200.0, OrigenDeFabricacion.CHINA, Categoria.HERRAMIENTAS, true));
+        productos.add(new Producto(4, "Cocina", 80500.0, OrigenDeFabricacion.CHINA, Categoria.ELECTROHOGAR, true));
+        productos.add(new Producto(11, "Motosierra", 21200.0, OrigenDeFabricacion.BRASIL, Categoria.HERRAMIENTAS, true));
+        productos.add(new Producto(12, "Telefono fijo", 25032.0, OrigenDeFabricacion.URUGUAY, Categoria.TELEFONIA, true));
+        productos.add(new Producto(13, "Router", 50320.0, OrigenDeFabricacion.CHINA, Categoria.INFORMATICA, true));
+        productos.add(new Producto(14, "Tablet", 17800.0, OrigenDeFabricacion.ARGENTINA, Categoria.TELEFONIA, true));
+        return productos;
     }
 }
